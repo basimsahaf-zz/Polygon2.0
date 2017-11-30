@@ -7,8 +7,6 @@ import { compose, withProps, lifecycle } from 'recompose';
 import {StandaloneSearchBox} from 'react-google-maps/lib/components/places/StandaloneSearchBox';
 import keys from './keys';
 import $ from "jquery";
-
-
 import {Image} from 'react-bootstrap';
 
 
@@ -18,16 +16,6 @@ import Logo from './img/logo.png';
 /**
  * Defining the search box
  */
-
- var temp = "https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCU1p7jqHvM6zxyxhrTkNBbDGNoYnsYlOs"
-
-
- function getData(url) {
-   var address = "";
-     $.getJSON(url, function(data) {
-        return data.results[0].formatted_address;
-     });
-  }
 
 const Searchbox = compose(
    withProps({
