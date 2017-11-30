@@ -58,4 +58,3 @@ typings/
 .env
 
 server/venv
-frontend/polygon/src/keys.js
