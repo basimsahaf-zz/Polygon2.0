@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: '20px';
+  height: 100vh;
+  color: white;
+}
+
+.leftBar {
+  background-color: black;
+  height: 100vh;
+}
+
+.logo {
+  width: 70%;
+  display: block;
+  margin: 2% 4% 2% 3%;
+}
+
+
+.map {
+  height: 100vh;
+  background-color: black;
+}
