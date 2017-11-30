@@ -8,6 +8,7 @@
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
     "react-google-maps": "^9.4.1",
     "react-materialize": "^1.1.0",
     "react-scripts": "1.0.17"
