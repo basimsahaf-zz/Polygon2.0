@@ -5,6 +5,7 @@ import {Button,Row, Col, Input} from 'react-materialize';
 import {Polygon, withScriptjs, withGoogleMap, GoogleMap, Marker, Geocoder} from "react-google-maps";
 import { compose, withProps, lifecycle } from 'recompose';
 import {StandaloneSearchBox} from 'react-google-maps/lib/components/places/StandaloneSearchBox';
+import FontAwesome from 'react-fontawesome';
 import keys from './keys';
 import $ from "jquery";
 import {Image} from 'react-bootstrap';
@@ -98,7 +99,7 @@ class SearchForm extends React.Component {
 class LeftBar extends React.Component {
   constructor() {
     super();
-    this.state = {lat: 0, long: 0, apiStr: ''};
+    this.state = {lat: 0, long: 0, apiStr: 'Finding current location'};
     this.location = navigator.geolocation.getCurrentPosition(function(position)
     {
       var address = "https://maps.googleapis.com/maps/api/geocode/json?latlng="
@@ -121,8 +122,14 @@ class LeftBar extends React.Component {
     return (
       <Col s={1} className='col s12 m4 l3 leftBar'>
         <Image className = "logo" src = {Logo} responsive />
-        <i class="pin"></i>
-        <div className="location">{this.state.apiStr}</div>
+        <div className="location">
+        <FontAwesome
+        className='super-crazy-colors'
+        name='location-arrow'
+        pulse
+        style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)', color: '#d35400'}}
+      /> {this.state.apiStr}
+        </div>
         <SearchForm/>
       </Col>
     )
