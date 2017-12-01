@@ -13,6 +13,10 @@ body {
   height: 100vh;
 }
 
+.row .col {
+  padding: 0.75rem;
+}
+
 .logo {
   width: 70%;
   display: block;
@@ -22,52 +26,23 @@ body {
 
 .map {
   height: 100vh;
+  padding: 0;
   background-color: black;
 }
 
 
-.pin {
-  background-color: #aaa;
-  background-image: linear-gradient(to right, #fc4a1a, #f7b733);
-  display: block;
-  height: 2em;
-  left: 2%;
-  margin: 0 0;
-  position: absolute;
-  width: .1em;
-}
-.pin:after {
-  background-color: skyBlue;
-  background-image: linear-gradient(to right, #fc4a1a, #f7b733);
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
-              inset .2em .2em .2em hsla(0,0%,100%,.2),
-              inset -.2em -.2em .2em hsla(0,0%,0%,.2),
-              1.5em 1.25em .25em hsla(0,0%,0%,.15);
-  content: '';
-  height: .8em;
-  left: -.35em;
-  position: absolute;
-  top: -.65em;
-  width: .8em;
-}
-.pin:before {
-  background-color: linear-gradient(to right, #fc4a1a, #f7b733);
-  box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
-  content: '';
-  height: 1.5em;
-  left: 0;
-  position: absolute;
-  top: .5em;
-  transform: rotate(57.5deg);
-  transform-origin: 50% 100%;
-  width: .1em;
+.radioButtons {
+  padding: 20%;
 }
 
 .location {
   text-align: center;
   padding: 5%;
   margin-top: 10%;
+}
+
+.leftBar {
+  padding: 20%;
 }
 
 .location > * {

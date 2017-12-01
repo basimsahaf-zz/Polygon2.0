@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Button,Row, Col, Input} from 'react-materialize';
-import {Polygon, withScriptjs, withGoogleMap, GoogleMap, Marker, Geocoder} from "react-google-maps";
+import {withScriptjs, withGoogleMap, GoogleMap} from "react-google-maps";
 import { compose, withProps, lifecycle } from 'recompose';
 import {StandaloneSearchBox} from 'react-google-maps/lib/components/places/StandaloneSearchBox';
 import FontAwesome from 'react-fontawesome';
@@ -17,7 +17,6 @@ import Logo from './img/logo.png';
 /**
  * Defining the search box
  */
-
 
 const Searchbox = compose(
    withProps({
@@ -88,8 +87,9 @@ class SearchForm extends React.Component {
         <option value='4'>$3000-$4000</option>
         <option value='5'>$4000+</option>
       </Input>
-      <Input name='group1' type='checkbox' value='true' label='In Downtown' defaultValue='checked' />
-      <Input name='group1' type='checkbox' value='true' label='Show Nearby Locations' defaultValue='checked' />
+      <Input className ="radioButtons" name='group1' type='checkbox' value='true' label='In Downtown' defaultValue='checked' />
+      <Input className ="radioButtons" name='group1' type='checkbox' value='true' label='Show nearby places' defaultValue='checked' />
+
       </Row>
       <div className="searchBar"><Button waves='light' className="searchBox red" node='a' href='#'> Predict </Button></div>
       </div>
@@ -153,9 +153,9 @@ class MapSec extends React.Component {
     <MyMapComponent
         isMarkerShown
         googleMapURL= {keys.gMapsAPI}
-        loadingElement={<div style={{ height: `100%`, width: `128vh`}} />}
-        containerElement={<div style={{ height: `100vh`, width: `128vh` }} />}
-        mapElement={<div style={{ height: `100%`, width: `128 vh` }} />}
+        loadingElement={<div style={{ height: `100%`, width: `100%`}} />}
+        containerElement={<div style={{ height: `100%`, width: `100%` }} />}
+        mapElement={<div style={{ height: `100%`, width: `100%` }} />}
       />
     </Col>
     )
