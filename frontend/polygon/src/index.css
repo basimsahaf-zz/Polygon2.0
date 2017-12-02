@@ -11,6 +11,28 @@ body {
 .leftBar {
   background-color: black;
   height: 100vh;
+  padding: 0.75rem;
+}
+
+.row .col.m4 {
+  padding: 0 0.75rem;
+}
+
+
+.input {
+  padding: 0 2%;
+}
+
+.select-dropdown {
+  padding: 0.75rem;
+}
+
+.col .s1 .col .s12 .m4 .l3 .leftBar{
+  padding: 0 0.25rem;
+}
+
+.row .col {
+  padding: 0;
 }
 
 .row .col {
@@ -21,6 +43,7 @@ body {
   width: 70%;
   display: block;
   margin: 2% 4% 2% 3%;
+  z-index: 100;
 }
 
 
@@ -28,6 +51,7 @@ body {
   height: 100vh;
   padding: 0;
   background-color: black;
+  z-index: 100000;
 }
 
 
@@ -39,6 +63,11 @@ body {
   text-align: center;
   padding: 5%;
   margin-top: 10%;
+  z-index: 1;
+}
+
+.leftBar {
+  padding: 20%;
 }
 
 .leftBar {
@@ -47,6 +76,10 @@ body {
 
 .location > * {
   padding: 2%;
+}
+
+.particles {
+  z-index: -1;
 }
 
 .textField {

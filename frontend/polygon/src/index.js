@@ -9,6 +9,9 @@ import FontAwesome from 'react-fontawesome';
 import keys from './keys';
 import $ from "jquery";
 import {Image} from 'react-bootstrap';
+import React3 from 'react-three-renderer';
+import * as THREE from 'three';
+import {Particles, Modes} from 'react-particles-js';
 
 
 /* Importing media */
@@ -17,6 +20,98 @@ import Logo from './img/logo.png';
 /**
  * Defining the search box
  */
+
+
+class RenderParticles extends React.Component {
+  render() {
+    return (
+      <Particles className="particles"
+              params={{
+                particles: {
+                  number: {
+                    value: 20,
+                    density: {
+                      enable: false,
+                      value_area: 800
+                    },
+                    color: {
+                      value: "#e74c3c"
+                    },
+                    move: {
+                        enable: !0,
+                        speed: 3,
+                        direction: "none",
+                        random: !1,
+                        straight: !1,
+                        out_mode: "bounce",
+                        bounce: !0,
+                        attract: {
+                            enable: 1,
+                            rotateX: 3e3,
+                            rotateY: 3e3
+                        }
+                    }
+                  },
+                  interactivity: {
+                  detect_on: "canvas",
+                  events: {
+                      onhover: {
+                          enable: !0,
+                          mode: "grab"
+                      },
+                      onclick: {
+                          enable: !1,
+                          mode: "repulse"
+                      },
+                      resize: !0
+                  },
+                modes: {
+                        grab: {
+                            distance: 180,
+                            line_linked: {
+                                opacity: .35
+                            }
+                        },
+                        bubble: {
+                            distance: 200,
+                            size: 80,
+                            duration: .4
+                        },
+                        repulse: {
+                            distance: 100,
+                            duration: 5
+                        },
+                        push: {
+                            particles_nb: 4
+                        },
+                        remove: {
+                            particles_nb: 2
+                        }
+                    }
+                  },
+                  shape: {
+                    type: ["circle", "triangle"],
+                    stroke: {
+                      width: 2,
+                      color: "#e74c3c"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                }
+              }}}
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "15%",
+                height: "100%",
+                zIndex: 0
+              }}
+            />
+    )
+  }
+}
 
 const Searchbox = compose(
    withProps({
@@ -88,8 +183,6 @@ class SearchForm extends React.Component {
         <option value='5'>$4000+</option>
       </Input>
       <Input className ="radioButtons" name='group1' type='checkbox' value='true' label='In Downtown' defaultValue='checked' />
-      <Input className ="radioButtons" name='group1' type='checkbox' value='true' label='Show nearby places' defaultValue='checked' />
-
       </Row>
       <div className="searchBar"><Button waves='light' className="searchBox red" node='a' href='#'> Predict </Button></div>
       </div>
@@ -122,6 +215,7 @@ class LeftBar extends React.Component {
   render() {
     return (
       <Col s={1} className='col s12 m4 l3 leftBar'>
+        <RenderParticles/>
         <Image className = "logo" src = {Logo} responsive />
         <div className="location">
         <FontAwesome
@@ -132,6 +226,7 @@ class LeftBar extends React.Component {
       /> {this.state.apiStr}
         </div>
         <SearchForm/>
+
       </Col>
     )
   }
@@ -174,6 +269,7 @@ class MainPage extends React.Component {
     )
   }
 }
+
 
 ReactDOM.render(
   <MainPage/>,

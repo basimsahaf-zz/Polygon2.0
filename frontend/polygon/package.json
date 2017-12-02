@@ -5,13 +5,17 @@
   "dependencies": {
     "immutable": "^3.8.2",
     "jquery": "^3.2.1",
-    "react": "^16.2.0",
+    "react": "^15.6.1",
     "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.2.0",
+    "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-google-maps": "^9.4.1",
     "react-materialize": "^1.1.0",
-    "react-scripts": "1.0.17"
+    "react-particles-js": "^2.1.0",
+    "react-scripts": "1.0.17",
+    "react-three": "^0.9.7",
+    "react-three-renderer": "^3.2.3",
+    "three": "^0.86.0"
   },
   "scripts": {
     "start": "react-scripts start",
